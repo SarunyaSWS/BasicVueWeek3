@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Vue Test</title>
+</head>
+<body>
+    <div id = "testapp">
+        <h2>Name : {{text}} </h2>
+        <h2>Input Name :<input type="text" v-model="text"></h2>
+        <hr>
+        <h2> Your Age :{{age}} </h2>
+        <input type="button" v-on:click = "age += 1" value="add + ">
+        <input type="button" v-on:click = "age -= 1" value="del - ">        
+        <hr>
+        <h2>
+            อาหารที่ชอบ : {{food}}
+            <br>
+            Food : 
+            <input type="checkbox"  value="หมูปิ้ง" v-model="food"><label>หมูปิ้ง</label>
+            <input type="checkbox"  value="กระเพรา" v-model="food"><label>กระเพรา</label>
+            <input type="checkbox"  value="มาม่า" v-model="food"><label>มาม่า</label>
+        </h2>
+        <hr>
+        <h2>
+                เพศ : {{gender}}
+                <br>
+                เลือกเพศ : 
+                <input type="radio"  value="ชาย" v-model="gender"> <label>ชาย</label>
+                <input type="radio"  value="หญิง" v-model="gender"> <label>หญิง</label>
+                <input type="radio" value="ไม่ระบุ" v-model="gender"> <label>ไม่ระบุ</label>
+        </h2>
+        <hr>
+        <h2>
+                อาชีพ : {{selected}}
+                <br>
+                เลือกอาชีพ : 
+                <select v-model="selected">
+                    <option>  Programmer</option>
+                    <option>  Engineer</option>
+                    <option>  Teacher</option>
+                    <option>  Other</option>
+                </select>
+        </h2>
+        <hr>
+        <input type="button"  value="Display Message" v-on:click="statuss">
+        <h1 v-if="status">Click เพื่อแสดงข้อความ</h1>
+        
+
+        
+    <script src="app.js"></script>
+
+
+</body>
+</html>
